@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "packages": {
+    "@fidanjs/runtime": {
+      "signature": "2da9a86c876ace4e353c3b267aa36d78"
+    },
+    "@fidanjs/babel-plugin-fidan-jsx": {
+      "signature": "2d9169785b052baf744377bb37e46abb"
+    }
+  }
+}

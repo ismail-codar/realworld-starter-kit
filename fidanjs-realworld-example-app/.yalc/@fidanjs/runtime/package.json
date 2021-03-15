@@ -1,0 +1,51 @@
+{
+  "name": "@fidanjs/runtime",
+  "version": "1.0.0-2da9a86c",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "testp": "cd packages/babel-plugin-fidan-jsx && npm run testp && cd ..",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "demo": "parcel _demo/index.html --no-cache --port 1233",
+    "local": "yarn build && yalc publish && yalc push"
+  },
+  "peerDependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "author": "ismail codar",
+  "module": "dist/runtime.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/runtime.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/runtime.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "dependencies": {}
+}
